@@ -14,7 +14,7 @@ namespace PersistentStorage.NonCachedJson
         { 
             get
             { 
-                return "PersistentStorage.NonCachedJson"; 
+                return "PersistentStorage.NonCachedJsonStorage"; 
             } 
         }
 
