@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersistentStorage.NonCachedJson", "PersistentStorage.NonCachedJson\PersistentStorage.NonCachedJson.csproj", "{B3E8B3FD-10CC-4C2C-A298-F43E96AB1AC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3E8B3FD-10CC-4C2C-A298-F43E96AB1AC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3E8B3FD-10CC-4C2C-A298-F43E96AB1AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3E8B3FD-10CC-4C2C-A298-F43E96AB1AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3E8B3FD-10CC-4C2C-A298-F43E96AB1AC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1ECBCB40-A5DB-4571-B7E3-E023A3AA6663}
+	EndGlobalSection
+EndGlobal
