@@ -35,89 +35,20 @@ namespace PersistentStorage.NonCachedJson
             throw new NotImplementedException();
         }
 
-        public void SetValue(string Query, string Value)
+        public B GetValue<B>(string query)
         {
             string JsonFile = File.ReadAllText(Path.Combine(Properties.DataFilePath, Properties.DataFile));
 
-            JObject Object = JsonConvert.DeserializeObject(JsonFile) as JObject;
-
-            JToken Token = Object.SelectToken(Query);
-
-            Token.Replace(Value);
-
-            File.WriteAllText(Path.Combine(Properties.DataFilePath, Properties.DataFile), Object.ToString());
+            return QueryParser.GetValue<B>(query, JsonConvert.DeserializeObject(JsonFile));
         }
 
-        public void SetValue(string Query, int Value)
+        public void SetValue<B>(string query, B value)
         {
             string JsonFile = File.ReadAllText(Path.Combine(Properties.DataFilePath, Properties.DataFile));
+            
+            object Object = QueryParser.SetValue(query, JsonConvert.DeserializeObject(JsonFile), value);
 
-            JObject Object = JsonConvert.DeserializeObject(JsonFile) as JObject;
-
-            JToken Token = Object.SelectToken(Query);
-
-            Token.Replace(Value);
-
-            File.WriteAllText(Path.Combine(Properties.DataFilePath, Properties.DataFile), Object.ToString());
-        }
-
-        public void SetValue(string Query, bool Value)
-        {
-            string JsonFile = File.ReadAllText(Path.Combine(Properties.DataFilePath, Properties.DataFile));
-
-            JObject Object = JsonConvert.DeserializeObject(JsonFile) as JObject;
-
-            JToken Token = Object.SelectToken(Query);
-
-            Token.Replace(Value);
-
-            File.WriteAllText(Path.Combine(Properties.DataFilePath, Properties.DataFile), Object.ToString());
-        }
-
-        public string GetString(string Query)
-        {
-            string JsonFile = File.ReadAllText(Path.Combine(Properties.DataFilePath, Properties.DataFile));
-
-            JObject Object = JsonConvert.DeserializeObject(JsonFile) as JObject;
-
-            JToken Token = Object.SelectToken(Query);
-
-            return Token.ToObject<string>();
-        }
-
-        public int GetInt(string Query)
-        {
-            string JsonFile = File.ReadAllText(Path.Combine(Properties.DataFilePath, Properties.DataFile));
-
-            JObject Object = JsonConvert.DeserializeObject(JsonFile) as JObject;
-
-            JToken Token = Object.SelectToken(Query);
-
-            return Token.ToObject<int>();
-
-        }
-
-        public bool GetBool(string Query)
-        {
-            string JsonFile = File.ReadAllText(Path.Combine(Properties.DataFilePath, Properties.DataFile));
-
-            JObject Object = JsonConvert.DeserializeObject(JsonFile) as JObject;
-
-            JToken Token = Object.SelectToken(Query);
-
-            return Token.ToObject<bool>();
-
-        }
-
-        public object GetType(string Query)
-        {
-            string JsonFile = File.ReadAllText(Path.Combine(Properties.DataFilePath, Properties.DataFile));
-
-            JObject Object = JsonConvert.DeserializeObject(JsonFile) as JObject;
-
-            JToken Token = Object.SelectToken(Query);
-
-            return Token.ToObject<object>();
+            File.WriteAllText(Path.Combine(Properties.DataFilePath, Properties.DataFile), JsonConvert.SerializeObject(Object));
         }
     }
 }
