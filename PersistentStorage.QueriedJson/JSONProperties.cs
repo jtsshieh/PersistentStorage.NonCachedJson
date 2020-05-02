@@ -1,4 +1,4 @@
-﻿namespace PersistentStorage.NonCachedJson
+﻿namespace PersistentStorage.QueriedJson
 {
     public class JSONProperties : IProperties
     {

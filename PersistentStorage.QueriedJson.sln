@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersistentStorage.NonCachedJson", "PersistentStorage.NonCachedJson\PersistentStorage.NonCachedJson.csproj", "{B3E8B3FD-10CC-4C2C-A298-F43E96AB1AC7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersistentStorage.QueriedJson", "PersistentStorage.QueriedJson\PersistentStorage.QueriedJson.csproj", "{B3E8B3FD-10CC-4C2C-A298-F43E96AB1AC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
