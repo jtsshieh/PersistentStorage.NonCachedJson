@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>jtsshieh</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageId>Garamia.PersistentStorage.QueriedJson</PackageId>
+    <RootNamespace>PersistentStorage.QueriedJson</RootNamespace>
+	<AssemblyName>PersistentStorage.QueriedJson</AssemblyName>
+	<Version>1.0.2</Version>
+	<RepositoryUrl>https://github.com/jtsshieh/PersistentStorage.QueriedJson</RepositoryUrl>
+	<Product>PersistentStorage.QueriedJson</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Garamia.PersistentStorage" Version="1.0.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>
