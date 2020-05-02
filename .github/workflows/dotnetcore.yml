@@ -26,5 +26,5 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        name: PersistentStorage.NonCachedJson
-        path: PersistentStorage.NonCachedJson/bin/Release/netstandard2.0
+        name: PersistentStorage.QueriedJson
+        path: PersistentStorage.QueriedJson/bin/Release/netstandard2.0
